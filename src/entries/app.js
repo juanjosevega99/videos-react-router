@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { render } from "react-dom";
 import Home from "../pages/containers/home";
 import { Provider } from "react-redux";
@@ -11,6 +11,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import { BrowserRouter } from "react-router-dom";
 
+import Header from "../pages/components/header.js";
 // function logger({ getState, dispatch}) {
 //   return (next) => {
 //     return (action) => {
@@ -40,9 +41,12 @@ const store = createStore(
 const homeContainer = document.getElementById("home-container");
 
 render(
-  <BrowserRouter basename="/videos">
+  <BrowserRouter>
     <Provider store={store}>
-      <Home />
+      <Fragment>
+        <Header />
+        <Home />
+      </Fragment>
     </Provider>
   </BrowserRouter>,
   homeContainer
