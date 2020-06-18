@@ -1,7 +1,7 @@
 import React from "react";
 import "./generic-page.css";
 
-const Home = () => {
+const Home = () => (
   <div className="Page">
     <h1>Bienvenido a Platzi Video</h1>
     <p>
@@ -14,7 +14,7 @@ const Home = () => {
       Puedes encontrar su versión móvil en el curso de{" "}
       <a href="https://platzi.com/native">React Native</a>
     </p>
-  </div>;
-};
+  </div>
+);
 
 export default Home;
